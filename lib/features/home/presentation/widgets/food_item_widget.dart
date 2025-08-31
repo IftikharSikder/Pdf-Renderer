@@ -16,9 +16,8 @@ class FoodItemWidget extends StatelessWidget {
   final bool? isHalal;
   final Function()? onTap;
   final Function()? onTapAdd;
-  
-  const FoodItemWidget({super.key, this.offerText, required this.name, required this.imgUrl, required this.price, this.discount, this.isVeg, this.isHalal, this.onTap, this.onTapAdd});
-  
+  const FoodItemWidget({super.key, this.offerText, required this.name, required this.imgUrl, required this.price, this.discount, this.isVeg, this.isHalal, this.onTap, this.onTapAdd,});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -32,7 +31,7 @@ class FoodItemWidget extends StatelessWidget {
                   child: Image.network(imgUrl, errorBuilder: (context, error, stackTrace) => Image.asset(imgUrl, fit: BoxFit.cover), fit: BoxFit.cover),
                 ),
               ),
-              
+
               if(offerText != null)
                 Skeleton.ignore(child: OfferWidget(offerText: offerText)),
 

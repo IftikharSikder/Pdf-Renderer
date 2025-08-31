@@ -1,6 +1,4 @@
 import 'dart:ui';
-
-// todo replace with api data
 class Food {
   final String imgUrl;
   final String name;
@@ -24,6 +22,5 @@ class Food {
     this.onTapAdd,
   });
 
-  // Get discounted price
   double get discountedPrice => price - (price * discount);
 }

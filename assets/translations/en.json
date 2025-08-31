@@ -21,5 +21,13 @@
   "menu": "Menu",
   "cart": "Cart",
   "offers": "Offers",
-  "account": "Account"
+  "account": "Account",
+  "happy_hour": "Happy Hour",
+  "discounts": "Discounts",
+  "bogo": "BOGO",
+  "Coupons": "Coupons",
+  "available_discounts": "Available Discounts",
+  "exclusive_food_deals": "Exclusive Food Deals",
+  "get_special_deal": "Get Special Deals on our favourite foods",
+  "available_coupons": "Available Coupons"
 }

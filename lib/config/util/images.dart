@@ -24,6 +24,7 @@ class Images {
   static String get accountInactive => 'account_inactive'.svg;
   static String get menuActive => 'menu_active'.svg;
   static String get menuInactive => 'menu_inactive'.svg;
+  static String get flame => 'time_flame'.svg;
 }
 
 extension on String {
