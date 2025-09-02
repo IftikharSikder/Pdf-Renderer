@@ -5,11 +5,12 @@ import 'package:flutter_boilerplate/features/home/presentation/screens/demo_scre
 import 'package:flutter_boilerplate/features/home/presentation/screens/home_screen.dart';
 import 'package:flutter_boilerplate/features/home/presentation/screens/main_scaffold_screen.dart';
 import 'package:flutter_boilerplate/features/menu/presentation/screens/menu_screen.dart';
-import 'package:flutter_boilerplate/features/offers/presentation/screens/offers_screen.dart';
 import 'package:flutter_boilerplate/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:flutter_boilerplate/features/service_list/presentation/screens/all_service_view_screen.dart';
 import 'package:flutter_boilerplate/features/splash/presentation/screens/splash_screen.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../features/offers/presentation/screens/offers_screen.dart';
 
 class RouteConfig {
   static const String homeScreen = 'home';

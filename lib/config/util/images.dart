@@ -25,6 +25,8 @@ class Images {
   static String get menuActive => 'menu_active'.svg;
   static String get menuInactive => 'menu_inactive'.svg;
   static String get flame => 'time_flame'.svg;
+  static String get copyText => 'copy_icon'.svg;
+  static String get leftArrow => 'left_arrow'.svg;
 }
 
 extension on String {

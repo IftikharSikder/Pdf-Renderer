@@ -6,8 +6,8 @@ import 'package:flutter_boilerplate/features/common/presentation/widgets/custom_
 class ExclusiveFoodCard extends StatelessWidget {
   final String foodTitle;
   final String description;
-  final int discountAmount;
-  final int foodPrice;
+  final double discountAmount;
+  final double foodPrice;
   const ExclusiveFoodCard({super.key, required this.foodTitle, required this.description, required this.discountAmount, required this.foodPrice});
 
   @override
@@ -17,7 +17,8 @@ class ExclusiveFoodCard extends StatelessWidget {
     double width = MediaQuery.of(context).size.height;
 
     return Card(
-      elevation: 2,
+      elevation: 4,
+      shadowColor: Theme.of(context).disabledColor.withValues(alpha: .4),
       child: SizedBox(
         child: Padding(
           padding: const EdgeInsets.all(10),
@@ -26,25 +27,28 @@ class ExclusiveFoodCard extends StatelessWidget {
               Row(
                 children: [
                   Container(
+                    margin: EdgeInsets.only(right: Dimensions.paddingSizeDefault),
                     height: height*.08,
-                    width: width*.1,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(Dimensions.paddingSizeEight)),
-                    child: Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/1200px-Cheeseburger.jpg"),
+                    width: width*.08,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(Dimensions.radiusLarge),
+                        child: Image.network("https://imgs.search.brave.com/oZO9YW4CMYqVRWM2dw5cVY7NQjofr2Lmtt-TvgK8I4A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9k/ZWxpY2lvdXMtZ3Jp/bGxlZC1jaGVlc2Vi/dXJnZXItd2l0aC1i/YWNvbl8yMy0yMTUx/OTg1NDcxLmpwZz9z/ZW10PWFpc19oeWJy/aWQmdz03NDA",fit: BoxFit.fill,)),
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(foodTitle, style: sfProRoundedSemiBold.copyWith(fontSize: Dimensions.paddingSizeExtraLarge30)),
+                      Text(foodTitle, style: sfProRoundedSemiBold.copyWith(fontSize: Dimensions.paddingSizeLarge),maxLines: 2),
                       Text(
                         description,
-                        style: sfProRoundedRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.radiusExtraLarge),
+                        style: sfProRoundedRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeExtraLarge),
                       ),
                     ],
                   ),
                 ],
               ),
               SizedBox(height: Dimensions.paddingSizeDefault,),
-              Divider(color: Theme.of(context).disabledColor),
+              Divider(color: Theme.of(context).disabledColor.withValues(alpha: .5)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -54,7 +58,7 @@ class ExclusiveFoodCard extends StatelessWidget {
                       Text(
                         "\$$discountAmount",
                         style: sfProRoundedRegular.copyWith(
-                          fontSize: Dimensions.paddingSizeExtraLarge,
+                          fontSize: Dimensions.radiusExtraLarge,
                           color: Theme.of(context).disabledColor,
                           decoration: TextDecoration.lineThrough,
                           decorationColor: Theme.of(context).disabledColor,

@@ -4,8 +4,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/config/util/dimensions.dart';
 import 'package:flutter_boilerplate/config/util/images.dart';
-import 'package:flutter_boilerplate/features/home/presentation/widgets/food_item_widget.dart';
+//import 'package:flutter_boilerplate/features/home/presentation/widgets/food_item_widget.dart';
 import 'package:flutter_boilerplate/features/home/presentation/widgets/section_header.dart';
+
+import 'food_item_widget.dart';
 
 class CategoryItemModel {
   final String title;

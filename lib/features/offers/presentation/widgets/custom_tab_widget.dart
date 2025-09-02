@@ -19,7 +19,7 @@ class CustomTabWidget extends StatelessWidget {
         builder: (context, child) {
           final bool isCurrentlySelected = controller.index == tabIndex;
           return Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            padding: EdgeInsets.symmetric(horizontal: Dimensions.fontSizeLarge, vertical: Dimensions.radiusDefault),
             decoration: BoxDecoration(
               color: isCurrentlySelected ? Colors.pink : Colors.transparent,
               borderRadius: BorderRadius.circular(Dimensions.paddingSizeLarge),
@@ -35,6 +35,7 @@ class CustomTabWidget extends StatelessWidget {
               style: sfProRoundedMedium.copyWith(
                 color: isCurrentlySelected ? Colors.white : Colors.black,
                 fontWeight: isCurrentlySelected ? FontWeight.w600 : FontWeight.normal,
+                letterSpacing: 1.8,
               ),
             ),
           );

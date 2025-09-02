@@ -1,13 +1,15 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/config/util/dimensions.dart';
 
-class TimeViewWidget extends StatelessWidget {
-  const TimeViewWidget({super.key});
+class CountDownWidget extends StatelessWidget {
+  const CountDownWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: Dimensions.paddingSizeDefault),
+      padding: EdgeInsets.only(top: 15, bottom: Dimensions.fontSizeExtraLarge),
       child: Container(
         decoration: BoxDecoration(
             color: Colors.pink,

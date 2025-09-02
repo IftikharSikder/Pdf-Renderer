@@ -3,8 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'config_data_model.freezed.dart';
 part 'config_data_model.g.dart';
 
-
-
 @freezed
 abstract class ConfigDataModel with _$ConfigDataModel {
   const factory ConfigDataModel({

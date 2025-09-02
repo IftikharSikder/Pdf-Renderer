@@ -11,10 +11,10 @@ class ExclusiveFoodWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("exclusive_food_deals".tr(), style: sfProRoundedBold.copyWith(fontSize: Dimensions.paddingSizeExtraLarge30)),
+        SizedBox(height: Dimensions.paddingSizeLarge,),
+        Text("exclusive_food_deals".tr(), style: sfProRoundedBold.copyWith(fontSize: Dimensions.paddingSizeExtraLarge)),
         SizedBox(height: Dimensions.paddingSizeExtraSmall),
-        Text(
-          "get_special_deal".tr(),
+        Text("get_special_deal".tr(),
           style: sfProRoundedRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeExtraLarge),
         ),
         SizedBox(height: Dimensions.paddingSizeDefault),
@@ -24,7 +24,7 @@ class ExclusiveFoodWidget extends StatelessWidget {
             itemBuilder: (context, index){
             return Column(
               children: [
-                ExclusiveFoodCard(foodTitle: "Eid Special", description: "Buy 1 foods, get 2 foods", discountAmount: 5, foodPrice: 42,),
+                ExclusiveFoodCard(foodTitle: "Eid Special Buy 1 Get 2", description: "Buy 1 foods, get 2 foods", discountAmount: 82.99, foodPrice: 42.99,),
                 SizedBox(height: Dimensions.radiusDefault,),
               ],
             );

@@ -4,34 +4,34 @@ import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/config/util/dimensions.dart';
 import 'package:flutter_boilerplate/config/util/styles.dart';
 import 'package:flutter_boilerplate/features/common/presentation/widgets/custom_button.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../../../../config/util/images.dart';
 
 class CouponsWidgets extends StatelessWidget {
-
   const CouponsWidgets({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("available_coupons".tr(),style: sfProRoundedSemiBold.copyWith(fontSize: Dimensions.paddingSizeExtraLarge30),),
-            SizedBox(height: Dimensions.paddingSizeLarge,),
-            ListView.builder(
-              shrinkWrap: true,
-              itemCount: 3,
-                itemBuilder: (context, index){
-                return Column(
-                  children: [
-                    CouponsCard(),
-                    SizedBox(height: Dimensions.radiusSmall)
-                  ],
-                );
-                })
-          ],
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: Dimensions.paddingSizeLarge,),
+          Text("available_coupons".tr(),style: sfProRoundedSemiBold.copyWith(fontSize: 27),),
+          SizedBox(height: Dimensions.paddingSizeLarge,),
+          ListView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemCount: 4,
+              itemBuilder: (context, index){
+              return Column(
+                children: [
+                  CouponsCard(),
+                  SizedBox(height: Dimensions.radiusSmall)
+                ],
+              );
+              })
+        ],
       ),
     );
   }
@@ -43,6 +43,7 @@ class CouponsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 0,
       color: Color(0xFFF5F6F7),
       child: Padding(
         padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
@@ -61,8 +62,15 @@ class CouponsCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("FINFIRST25",style: sfProRoundedBold.copyWith(fontSize: Dimensions.paddingSizeExtraLarge),),
-                  Icon(Icons.copy, color: Colors.pink),
+                  Text("FINFIRST25",style: sfProRoundedSemiBold.copyWith(fontSize: Dimensions.paddingSizeExtraLarge),),
+                  InkWell(
+                    onTap: (){},
+                    borderRadius: BorderRadius.circular(50),
+                    splashColor: Theme.of(context).disabledColor,
+                    highlightColor: Theme.of(context).disabledColor,
+                    child: SvgPicture.asset(Images.copyText,height: Dimensions.radiusExtraLarge,width: Dimensions.radiusExtraLarge,),
+                  )
+
                 ],
               ),
               Text("Discount on Purchase. Valid till: 16 Jul 25, 10:58pm",style: sfProRoundedRegular.copyWith(fontSize: 18),),
