@@ -24,8 +24,6 @@ A Flutter Web application for viewing PDF files in the browser. Built with River
 
 ---
 
----
-
 ## Getting Started
 
 ### Prerequisites
